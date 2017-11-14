@@ -1,5 +1,5 @@
-# SSP #
+# Simple Safe PHP #
 <br/>
 
 SSP stand for Simple Safe PHP, teach the way to code PHP safe,
-simple and fast. <br/><br/>
+simple, fast and lightweight. <br/><br/>
