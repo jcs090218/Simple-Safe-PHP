@@ -1,7 +1,7 @@
 <?php
 /**
- * $File: sspl.php $
- * $Date: 2017-10-09 14:43:47 $
+ * $File: config.php $
+ * $Date: 2017-11-14 17:37:54 $
  * $Revision: $
  * $Creator: Jen-Chieh Shen $
  * $Notice: See LICENSE.txt for modification and distribution information
@@ -10,12 +10,9 @@
 
 namespace SSP;
 
-/* Include all the files here... */
 
-
-include_once("config.php");
-include_once("util.php");
-include_once("sql.php");
-include_once("debug.php");
+$sspLogColor = 'black';
+$sspErrorColor = 'red';
+$sspWarningColor = '#Ffd700';
 
 ?>

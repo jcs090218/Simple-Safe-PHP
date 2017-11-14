@@ -5,7 +5,11 @@
    - $Creator: Jen-Chieh Shen $
    - $Notice: See LICENSE.txt for modification and distribution information
    -                   Copyright (c) 2017 by Shen, Jen-Chieh $
-   -->
+-->
+
+<?php
+include("../src/ssp.php");
+?>
 
 
 <!doctype html>
@@ -27,10 +31,16 @@
     <?php
     }
 
-    include("../ssp.php");
+    
+    
+    SSP\println("Hello World Cool dude");
+    SSP\println("Hello World Cool dude");
+    
+    SSP\safeGetSession('Hello');
 
-    SSP\println("Hello World Cool dude");
-    SSP\println("Hello World Cool dude");
+    SSP\error('some error.');
+    SSP\log('some log.');
+    
     ?>
     
   </body>
