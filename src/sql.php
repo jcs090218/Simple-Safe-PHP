@@ -75,6 +75,16 @@ function sql_prepare($conn, $sql) {
 }
 
 /**
+ * Check if prepare statment succcess.
+ *
+ * @param { void* } stmt : statement object.
+ * @return { bool } : True, success. False, failure.
+ */
+function sql_prepare_success($stmt) {
+  return $stmt != NULL;
+}
+
+/**
  * Get result from the statment object. Please call this after
  * call execute function.
  *
