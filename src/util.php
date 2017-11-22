@@ -23,6 +23,30 @@ function printlnColor($text, $color) {
   echo '</div>';
 }
 
+/**
+ * Safe way to start the session.
+ */
+function safeSessionStart() {
+  if(isset($_SESSION))
+    return;
+
+  session_start();
+}
+
+/**
+ * Check if the file is forbidden file.
+ * If yes prompt 403 error.
+ *
+ * @param { string } fileNmae : file header to check.
+ * @return { bool } : true, is forbidden. false, vice versa.
+ */
+function isForbiddenFile($fileName) {
+  if (basename($_SERVER["PHP_SELF"]) == $fileName)
+    return false;
+
+  die("Error 403 - Forbidden");
+  return true;
+}
 
 /**
  * Check if the variable is set in system POST array.
@@ -80,6 +104,13 @@ function getGet($var) {
 }
 
 /**
+ * Set data to system $_SESSION array.
+ */
+function setSession($varPtr, $varRef) {
+  $_SESSION[$varPtr]= $varRef;
+}
+
+/**
  * Get data from system $_SESSION array.
  */
 function getSession($var) {
@@ -99,7 +130,7 @@ function getGlobals($var) {
 function safeGetPost($var) {
   if (issetPost($var))
     return getPost($var);
-  
+
   warning("POST data you trying to get is null... : " . $var);
   return NULL;
 }
@@ -135,6 +166,34 @@ function safeGetGlobals($var) {
 
   warning("GLOBALS data you trying to get is null... : " . $var);
   return NULL;
+}
+
+/**
+ * Reload page to this file.
+ *
+ * @param { string } path: return path.
+ */
+function locate($path) {
+  header("Location: ".$path);
+}
+
+/**
+ * Reload page with complete format.
+ *
+ * @note between $path and $flags will have '?' character between,
+ * be aware of the format.
+ *
+ * @example
+ * $path = "./index.php";
+ * $flags = "page=home&error=log";
+ *
+ * FORMAT will be ->>> "./index.php?page=home&error=log";
+ *
+ * @param { string } path : return path.
+ * @param { string } flags : flags or variables.
+ */
+function locateComplete($path, $flags) {
+  header("Location: ".$path."?".$flags);
 }
 
 ?>
