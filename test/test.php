@@ -31,17 +31,17 @@ include("../src/ssp.php");
     <?php
     }
 
-    
-    
     SSP\println("Hello World Cool dude");
     SSP\println("Hello World Cool dude");
-    
+
     SSP\safeGetSession('Hello');
 
     SSP\error('some error.');
     SSP\log('some log.');
+
+    SSP\sql_prepare(NULL, "");
     
     ?>
-    
+
   </body>
 </html>
