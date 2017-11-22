@@ -8,7 +8,7 @@
 -->
 
 <?php
-include("../src/ssp.php");
+include("../ssp.php");
 ?>
 
 
@@ -40,7 +40,7 @@ include("../src/ssp.php");
     SSP\log('some log.');
 
     SSP\sql_prepare(NULL, "");
-    
+
     ?>
 
   </body>
