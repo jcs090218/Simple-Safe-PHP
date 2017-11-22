@@ -3,6 +3,7 @@
 
 # some directories
 .env
+/build/SSP
 
 # development scripts
 *.bat
