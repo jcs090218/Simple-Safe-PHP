@@ -13,7 +13,7 @@ namespace SSP;
 /**
  * Write out the text with line break sign.
  */
-function println($text) {
+function println($text = "") {
   echo $text . "<br/>";
 }
 
