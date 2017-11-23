@@ -8,6 +8,9 @@
 # ========================================================================
 
 
+2017-11-23
+* Fixed util spelling error. (SSP)
+
 2017-11-22
 * First release version 1.0.0. (SSP)
 * Make source root. (SSP)
