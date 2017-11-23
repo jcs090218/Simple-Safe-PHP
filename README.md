@@ -13,6 +13,7 @@ simple, fast and lightweight. <br/><br/>
 SSP\println("Print a Line!");
 SSP\printlnColor("Print a Line with color!", "red");
 ```
+<img src="./screen_shot/echo.png" width="360" height="156"/>
 
 ### Debug ###
 ```
