@@ -31,6 +31,8 @@ if (SSP\issetPost($checkVar)) {
 ```
 
 ### Increase Readability ###
+Often confuse with PHP abbreviation, I am just picky and willing
+to rewrap the function into my own understanding. 
 ```
 // Connect database.
 $conn = SSP\sql_connect($host, $user, $pass, $database);
