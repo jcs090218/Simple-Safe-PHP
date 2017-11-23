@@ -41,7 +41,7 @@ function safeSessionStart() {
  * @return { bool } : true, is forbidden. false, vice versa.
  */
 function isForbiddenFile($fileName) {
-  if (basename($_SERVER["PHP_SELF"]) == $fileName)
+  if (basename($_SERVER["PHP_SELF"]) != $fileName)
     return false;
 
   die("Error 403 - Forbidden");
