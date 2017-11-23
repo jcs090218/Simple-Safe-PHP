@@ -20,7 +20,7 @@ SSP\log("This is normal log...");
 SSP\warning("This is warning log...");
 SSP\error("This is error log..");
 ```
-<img src="./screen_shot/debug.png"/>
+<img src="./screen_shot/debug.png" width="360" height="156"/>
 
 ### Check Variables ###
 ```
